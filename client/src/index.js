@@ -1,17 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { configureStore, applyMiddleware, compose } from "redux";
-import { thunk } from "redux-thunk";
-import reducers from "./redux/reducers";
 
 import App from "./App";
 
-const store = configureStore(reducers, compose(applyMiddleware(thunk)));
+import "./index.css";
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
 
 ReactDOM.render(
-  <Provider store={store}>
+  <React.StrictMode>
     <App />
-  </Provider>,
+  </React.StrictMode>,
   document.getElementById("root")
 );
